@@ -236,3 +236,39 @@ input[aria-invalid="true"] { border-color: var(--color-fail); box-shadow: 0 0 0 
 .verdict--no .verdict__title { color: var(--color-fail); }
 
 .notice { padding: var(--space-3) var(--space-4); border-left: 4px solid var(--color-primary); background: var(--color-surface-2); border-radius: var(--radius-sm); margin-bottom: var(--space-4); }
+
+/* ---------- Look du projet de L2 « Universe Security » ---------- */
+h1, h2 { font-weight: 700; }
+.topbar { border-bottom: 0; box-shadow: var(--shadow-sm); }
+.brand__mark { border-radius: 50%; font-size: var(--fs-base); }
+.nav a .fa-solid { margin-right: var(--space-2); width: 1.1em; text-align: center; }
+.nav a[aria-current="page"] { color: var(--color-on-primary); background: var(--color-primary); }
+.card { border: 0; box-shadow: var(--shadow-sm); }
+.section > h2 .fa-solid, .duty .fa-solid, .id-card .fa-solid { margin-right: var(--space-1); color: var(--color-primary); }
+.btn { border-radius: var(--radius-sm); }
+.table thead th { text-transform: none; letter-spacing: 0; font-size: var(--fs-sm); color: var(--color-text); border-bottom: 2px solid var(--color-border); }
+
+/* Connexion : carte blanche centrée sur fond bleu, champs soulignés */
+body.is-login { background: var(--banner); background-color: var(--color-bg); }
+body.is-login .topbar, body.is-login .footer { background: transparent; box-shadow: none; border: 0; color: var(--color-on-primary); }
+body.is-login .brand, body.is-login .footer { color: var(--color-on-primary); }
+body.is-login .brand__mark { background: var(--color-on-primary); color: var(--color-primary); }
+body.is-login .auth { background: var(--color-surface); border-radius: 10px; padding: var(--space-6) var(--space-5); box-shadow: var(--shadow-md); text-align: center; }
+.auth__logo { display: inline-grid; place-items: center; width: 4.5rem; height: 4.5rem; margin-bottom: var(--space-3); border-radius: 50%; background: var(--color-primary); color: var(--color-on-primary); font-size: 2rem; }
+.auth .form { box-shadow: none; padding: 0; text-align: left; }
+.auth input { border: 0; border-bottom: 1px solid var(--color-border); border-radius: 0; background: linear-gradient(var(--color-primary), var(--color-primary)) no-repeat bottom / 0 2px; transition: background-size .5s; }
+.auth input:focus { background-size: 100% 2px; border-bottom-color: transparent; outline: none; }
+.auth .form__actions .btn { width: 100%; }
+
+/* Carte étudiant : bannière, photo ronde, badge rose */
+.id-card { padding: 0 var(--space-5) var(--space-5); border-top: 0; overflow: hidden; gap: var(--space-2); }
+.id-card__banner { position: relative; height: 7.5rem; margin: 0 calc(-1 * var(--space-5)) 3.25rem; justify-self: stretch; background: var(--banner); }
+.id-card__photo { position: absolute; left: 50%; bottom: -3rem; transform: translateX(-50%); display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; border: 3px solid var(--color-surface); background: var(--color-surface-2); color: var(--color-primary); font: 700 var(--fs-lg) var(--font-heading); }
+.id-card__name { font-size: var(--fs-lg); }
+.id-badge { display: inline-block; padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); background: var(--color-accent); color: var(--color-on-accent); font-weight: 700; letter-spacing: 0.04em; }
+.id-card__level { font-size: 2rem; font-weight: 700; margin: 0; }
+
+/* Statut agent */
+.duty__state { display: inline-block; padding: var(--space-1) var(--space-2); border-radius: 4px; color: var(--color-on-status); }
+.status--on { background: var(--color-status-on); }
+.status--off { background: var(--color-status-off); }

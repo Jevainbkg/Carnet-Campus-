@@ -53,3 +53,7 @@ tests/          unitaires, base (Postgres local), interface (Playwright)
 - Le scan caméra n'est pas testé automatiquement (pas de caméra en CI) ; la saisie manuelle emprunte le même chemin (`verify_card`).
 - Pas d'import CSV ni de pagination : prévu pour quelques centaines d'étudiants.
 - La table `rondes` du L2 n'est pas reprise.
+
+## 6. v1.1 — Retour au visuel du projet de L2
+
+À la demande de l'auteur, l'interface reprend l'identité du projet d'origine « Universe Security » : fond blanc, Arial, bleu `#007bff`, cartes ombrées, icônes Font Awesome (servies localement, aucune ressource externe), connexion sur carte blanche avec champs soulignés, carte étudiant avec bannière, photo ronde (initiales) et badge rose du matricule, statut de service vert / rouge. Le moteur (Supabase, RLS, RPC) est inchangé. Tests : 10/10, 17/17, 16/16.
