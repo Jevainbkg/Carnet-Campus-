@@ -7,8 +7,8 @@
 ## 1. Cible
 | Élément | Service | Offre | URL |
 |---|---|---|---|
-| Code source | GitHub (public) | Gratuit | [À COMPLÉTER] |
-| Base + authentification | Supabase | Free | [À COMPLÉTER] |
+| Code source | GitHub (public) | Gratuit | https://github.com/Jevainbkg/Carnet-Campus- |
+| Base + authentification | Supabase | Free | https://dyughlhhlcodezthlplw.supabase.co |
 | Site | Vercel | Hobby (personnel, non commercial) | [À COMPLÉTER] |
 
 ## 2. Contrôles avant déploiement
@@ -24,9 +24,9 @@
 ## 3. Journal des étapes
 | # | Étape | Statut | Date | Remarques |
 |---|---|---|---|---|
-| 1 | Dépôt GitHub créé et code poussé | ⏳ | | |
+| 1 | Dépôt GitHub créé et code poussé | ✅ | 23/10/2026 | `main` |
 | 2 | Projet Supabase, `schema.sql` exécuté | ⏳ | | |
-| 3 | `config.js` renseigné (PR fusionnée) | ⏳ | | |
+| 3 | `config.js` renseigné (PR fusionnée) | ✅ | 23/10/2026 | PR #1 |
 | 4 | Vercel importé et déployé | ⏳ | | |
 | 5 | Site URL et Redirect URLs Supabase | ⏳ | | |
 | 6 | Recette en ligne (8 points) | ⏳ | | |
