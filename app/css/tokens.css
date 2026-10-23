@@ -1,0 +1,107 @@
+/* Tokens — seule source des couleurs, tailles et espacements.
+   Identité Carnet Campus : papier, encre bleue, stylo rouge. */
+:root {
+  --color-bg: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0ede4;
+  --color-text: #1b1f2a;
+  --color-text-muted: #545b6b;
+  --color-primary: #1e3a8a;
+  --color-primary-hover: #172e6e;
+  --color-on-primary: #ffffff;
+  --color-border: #ddd8cb;
+  --color-rule: #c9d6ee;
+  --color-focus: #d97706;
+  --color-pass: #166534;
+  --color-pass-bg: #e3f1e6;
+  --color-fail: #b91c1c;
+  --color-fail-bg: #fbe5e3;
+  --color-warn: #92400e;
+  --color-warn-bg: #fdf0d5;
+  --color-danger: #b91c1c;
+  --color-danger-hover: #991b1b;
+
+  --font-heading: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-num: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: clamp(1.6rem, 1.3rem + 1.4vw, 2.2rem);
+  --fs-score: clamp(2.2rem, 1.8rem + 2vw, 3rem);
+  --lh-tight: 1.2;
+  --lh-base: 1.55;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --container: 64rem;
+  --gutter: 1rem;
+  --field-min: 14rem;
+  --field-sm: 9rem;
+  --field-xs: 7rem;
+  --grade-input: 5.5rem;
+  --touch: 2.75rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-sm: 0 1px 2px rgb(20 24 40 / 0.06);
+  --shadow-md: 0 8px 24px rgb(20 24 40 / 0.12);
+  --transition: 160ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #12151d;
+    --color-surface: #1a1e29;
+    --color-surface-2: #222736;
+    --color-text: #eceef4;
+    --color-text-muted: #a5acbd;
+    --color-primary: #93b4ff;
+    --color-primary-hover: #b5ccff;
+    --color-on-primary: #0d1530;
+    --color-border: #2f3547;
+    --color-rule: #283252;
+    --color-focus: #fbbf24;
+    --color-pass: #86efac;
+    --color-pass-bg: #14301f;
+    --color-fail: #fca5a5;
+    --color-fail-bg: #3a1717;
+  --color-warn: #fcd34d;
+  --color-warn-bg: #3a2a0c;
+    --color-danger: #f87171;
+    --color-danger-hover: #fca5a5;
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.4);
+  }
+}
+
+/* Choix explicite de l'utilisateur (bouton jour/nuit). */
+:root[data-theme="dark"] {
+  --color-bg: #12151d;
+  --color-surface: #1a1e29;
+  --color-surface-2: #222736;
+  --color-text: #eceef4;
+  --color-text-muted: #a5acbd;
+  --color-primary: #93b4ff;
+  --color-primary-hover: #b5ccff;
+  --color-on-primary: #0d1530;
+  --color-border: #2f3547;
+  --color-rule: #283252;
+  --color-focus: #fbbf24;
+  --color-pass: #86efac;
+  --color-pass-bg: #14301f;
+  --color-fail: #fca5a5;
+  --color-fail-bg: #3a1717;
+  --color-warn: #fcd34d;
+  --color-warn-bg: #3a2a0c;
+  --color-danger: #f87171;
+  --color-danger-hover: #fca5a5;
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.4);
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carnet Campus</title>
+  <meta name="description" content="Carnet Campus : notes, frais et contrôle d'accès par QR code pour un établissement. Projet personnel de démonstration.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#/" aria-label="Carnet Campus, accueil">
+        <span class="brand__mark" aria-hidden="true">20</span>
+        <span class="brand__name">Carnet Campus</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navigation principale" hidden></nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Passer en mode nuit" title="Mode jour / nuit">🌙</button>
+      <div class="account" id="account" hidden>
+        <span class="account__email" id="account-email"></span>
+        <button type="button" class="btn btn--ghost btn--sm" id="logout">Déconnexion</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" class="container" tabindex="-1">
+    <p class="state state--loading" role="status">Chargement…</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Carnet Campus · projet personnel de démonstration, inspiré de CISNET 2025 · données fictives uniquement.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

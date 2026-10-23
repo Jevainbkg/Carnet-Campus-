@@ -1,0 +1,17 @@
+{
+  "name": "carnet-campus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Carnet Campus : notes, frais et contrôle d accès par QR code (HTML/CSS/JS + Supabase).",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/calc.test.mjs",
+    "test:ui": "node tests/e2e/ui.test.mjs",
+    "test:db": "psql -v ON_ERROR_STOP=1 -f tests/db/supabase-shim.sql -f supabase/schema.sql -f tests/db/rls.test.sql ",
+    "dev": "npx --yes serve@14.2.4 app"
+  },
+  "devDependencies": {
+    "playwright": "1.48.2",
+    "qrcode-generator": "^1.4.4"
+  }
+}
