@@ -1,28 +1,28 @@
 /* Tokens — seule source des couleurs, tailles et espacements.
-   Identité Carnet Campus : papier, encre bleue, stylo rouge. */
+   Identité reprise du projet de L2 « Universe Security » : fond blanc, Arial, bleu #007bff. */
 :root {
-  --color-bg: #f7f5ef;
+  --color-bg: #f9f9f9;
   --color-surface: #ffffff;
-  --color-surface-2: #f0ede4;
-  --color-text: #1b1f2a;
-  --color-text-muted: #545b6b;
-  --color-primary: #1e3a8a;
-  --color-primary-hover: #172e6e;
+  --color-surface-2: #f1f3f6;
+  --color-text: #333333;
+  --color-text-muted: #666666;
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
   --color-on-primary: #ffffff;
-  --color-border: #ddd8cb;
-  --color-rule: #c9d6ee;
-  --color-focus: #d97706;
-  --color-pass: #166534;
-  --color-pass-bg: #e3f1e6;
-  --color-fail: #b91c1c;
-  --color-fail-bg: #fbe5e3;
-  --color-warn: #92400e;
-  --color-warn-bg: #fdf0d5;
-  --color-danger: #b91c1c;
-  --color-danger-hover: #991b1b;
+  --color-border: #dddddd;
+  --color-rule: #cfe3ff;
+  --color-focus: #ff9800;
+  --color-pass: #1e7e34;
+  --color-pass-bg: #e6f4ea;
+  --color-fail: #c82333;
+  --color-fail-bg: #fdecee;
+  --color-warn: #b45f00;
+  --color-warn-bg: #fff3e0;
+  --color-danger: #dc3545;
+  --color-danger-hover: #c82333;
 
-  --font-heading: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --font-num: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
   --fs-xs: 0.8125rem;
   --fs-sm: 0.875rem;
@@ -50,10 +50,16 @@
   --grade-input: 5.5rem;
   --touch: 2.75rem;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --shadow-sm: 0 1px 2px rgb(20 24 40 / 0.06);
-  --shadow-md: 0 8px 24px rgb(20 24 40 / 0.12);
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --shadow-sm: 0 2px 5px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 8px rgb(0 0 0 / 0.2);
+  --color-accent: #e91e63;
+  --color-on-accent: #ffffff;
+  --color-on-status: #ffffff;
+  --color-status-on: #28a745;
+  --color-status-off: #dc3545;
+  --banner: linear-gradient(135deg, #007bff 0%, #0056b3 60%, #003d80 100%);
   --transition: 160ms ease;
 }
 
@@ -64,8 +70,8 @@
     --color-surface-2: #222736;
     --color-text: #eceef4;
     --color-text-muted: #a5acbd;
-    --color-primary: #93b4ff;
-    --color-primary-hover: #b5ccff;
+    --color-primary: #4da3ff;
+    --color-primary-hover: #80bdff;
     --color-on-primary: #0d1530;
     --color-border: #2f3547;
     --color-rule: #283252;
@@ -89,8 +95,8 @@
   --color-surface-2: #222736;
   --color-text: #eceef4;
   --color-text-muted: #a5acbd;
-  --color-primary: #93b4ff;
-  --color-primary-hover: #b5ccff;
+  --color-primary: #4da3ff;
+  --color-primary-hover: #80bdff;
   --color-on-primary: #0d1530;
   --color-border: #2f3547;
   --color-rule: #283252;

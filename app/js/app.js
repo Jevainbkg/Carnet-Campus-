@@ -124,11 +124,11 @@ const routes = {
 };
 
 const NAV = {
-  etudiant: [["carte", "Ma carte"], ["releve", "Mes notes"]],
-  agent: [["controle", "Contrôle"], ["alertes", "Alertes"]],
-  enseignant: [["matieres", "Mes matières"], ["saisie", "Saisie des notes"]],
-  admin: [["etudiants", "Étudiants"], ["membres", "Comptes"], ["frais", "Frais"], ["journal", "Journal"], ["alertes", "Alertes"]],
-  null: [["accueil", "Accueil"]],
+  etudiant: [["carte", "Ma carte", "id-card"], ["releve", "Mes notes", "graduation-cap"]],
+  agent: [["controle", "Contrôle", "qrcode"], ["alertes", "Alertes", "triangle-exclamation"]],
+  enseignant: [["matieres", "Mes matières", "book"], ["saisie", "Saisie des notes", "pen"]],
+  admin: [["etudiants", "Étudiants", "user-graduate"], ["membres", "Comptes", "users"], ["frais", "Frais", "money-bill"], ["journal", "Journal", "list"], ["alertes", "Alertes", "triangle-exclamation"]],
+  null: [["accueil", "Accueil", "house"]],
 };
 const ALLOWED = {
   etudiant: ["carte", "releve"],
@@ -137,6 +137,8 @@ const ALLOWED = {
   admin: ["etudiants", "etudiant", "membres", "frais", "journal", "alertes"],
   null: ["accueil"],
 };
+const fa = (name) => `<i class="fa-solid fa-${name}" aria-hidden="true"></i>`;
+const initials = (s) => `${s.first_name?.[0] ?? ""}${s.last_name?.[0] ?? ""}`.toUpperCase() || "?";
 const home = () => `#/${ALLOWED[role][0]}`;
 
 function currentRoute() {
@@ -146,7 +148,7 @@ function currentRoute() {
 
 async function refreshRole() {
   role = session ? await api.myRole() : null;
-  nav.innerHTML = NAV[role].map(([r, label]) => `<a href="#/${r}" data-route="${r}">${label}</a>`).join("");
+  nav.innerHTML = NAV[role].map(([r, label, icon]) => `<a href="#/${r}" data-route="${r}">${fa(icon)}${label}</a>`).join("");
 }
 
 async function router() {
@@ -160,6 +162,7 @@ async function router() {
   } else if (!ALLOWED[role].includes(name)) {
     return void location.replace(home());
   }
+  document.body.classList.toggle("is-login", !session);
   nav.hidden = !session;
   account.hidden = !session;
   nav.querySelectorAll("a").forEach((a) => {
@@ -174,6 +177,7 @@ async function router() {
 function viewLogin() {
   render(`
     <section class="auth">
+      <span class="auth__logo" aria-hidden="true">${fa("shield-halved")}</span>
       <h1>Carnet Campus</h1>
       <p class="muted">Notes, frais et contrôle d'accès d'un établissement, dans une seule application.</p>
       <div class="tabs" role="tablist">
@@ -303,15 +307,17 @@ async function viewCard({ isCurrent }) {
       <h1>Ma carte</h1>
       <div class="grid-2">
         <article class="card id-card" aria-label="Carte étudiant">
-          <p class="muted small">Carte étudiant · Carnet Campus</p>
+          <div class="id-card__banner"><span class="id-card__photo" aria-hidden="true">${esc(initials(me))}</span></div>
           <p class="id-card__name">${esc(fullName(me))}</p>
-          <p><span class="code">${esc(me.matricule)}</span> · ${esc(me.level || "—")}</p>
+          <p class="muted small">${fa("building-columns")} Carte étudiant · Carnet Campus</p>
+          <span class="id-badge">${esc(me.matricule)}</span>
+          <p class="id-card__level">${esc(me.level || "—")}</p>
           <div class="id-card__qr" id="qr">${svg ?? `<p class="muted small">QR indisponible (réseau).</p>`}</div>
           <p class="muted small">Code de secours (saisie manuelle) :<br><span class="code small" id="card-token">${esc(me.card_token)}</span></p>
           <p class="muted small">Présentez ce QR code à l'agent à l'entrée. En cas de perte, demandez à l'administration de renouveler la carte.</p>
         </article>
         <section class="card section">
-          <h2>Mes frais</h2>
+          <h2>${fa("money-bill")} Mes frais</h2>
           ${feesTable(fees)}
         </section>
       </div>`, "Ma carte");
@@ -382,7 +388,7 @@ async function viewControl({ isCurrent }) {
     render(`
       <h1>Contrôle d'accès</h1>
       <section class="card duty">
-        <p>Statut : <span class="duty__state" id="duty-state">${me.on_duty ? "En service" : "Hors service"}</span></p>
+        <p>${fa("user-shield")} Statut : <span class="duty__state ${me.on_duty ? "status--on" : "status--off"}" id="duty-state">${me.on_duty ? "En service" : "Hors service"}</span></p>
         <button type="button" class="btn ${me.on_duty ? "btn--ghost" : ""}" id="duty-toggle">${me.on_duty ? "Terminer le service" : "Prendre le service"}</button>
       </section>
       <div class="grid-2">
