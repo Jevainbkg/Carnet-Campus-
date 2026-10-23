@@ -7,7 +7,7 @@
 ## 1. Cible
 | Élément | Service | Offre | URL |
 |---|---|---|---|
-| Code source | GitHub (public) | Gratuit | [À COMPLÉTER] |
+| Code source | GitHub (public) | Gratuit | https://github.com/Jevainbkg/Carnet-Campus- |
 | Base + authentification | Supabase | Free | [À COMPLÉTER] |
 | Site | Vercel | Hobby (personnel, non commercial) | [À COMPLÉTER] |
 
@@ -24,7 +24,7 @@
 ## 3. Journal des étapes
 | # | Étape | Statut | Date | Remarques |
 |---|---|---|---|---|
-| 1 | Dépôt GitHub créé et code poussé | ⏳ | | |
+| 1 | Dépôt GitHub créé et code poussé | ✅ | 23/10/2026 | `main` |
 | 2 | Projet Supabase, `schema.sql` exécuté | ⏳ | | |
 | 3 | `config.js` renseigné (PR fusionnée) | ⏳ | | |
 | 4 | Vercel importé et déployé | ⏳ | | |
